@@ -21,6 +21,7 @@
 - (void) selectPhoto:(UIImagePickerControllerSourceType) pickerType;
 - (IBAction)displayAviaryEditor:(id)sender;
 - (void)displayEditorForImage:(UIImage *)imageToEdit;
+- (IBAction)openBannerFullScreen;
 
 @property (nonatomic, retain) UIImage *imageModifiedAviary;
 @property (nonatomic, retain) IBOutlet UIImageView *imageView;

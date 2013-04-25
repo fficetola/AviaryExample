@@ -29,11 +29,9 @@
     
     
         
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(closeModal:)];
-    
-    DLog(@"bannerURLString %@",bannerURLString);
-
-    UITapGestureRecognizer *tapTwice = [[UITapGestureRecognizer alloc] initWithTarget:self  action:@selector(handleDoubleTap:)];
+    self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(closeModal:)]autorelease];
+   
+    UITapGestureRecognizer *tapTwice = [[[UITapGestureRecognizer alloc] initWithTarget:self  action:@selector(handleDoubleTap:)]autorelease];
     
     tapTwice.numberOfTapsRequired = 2;
 
@@ -173,6 +171,9 @@
     zoomView.frame = zvf;
 }
 
-
+- (void)dealloc
+{
+    [super dealloc];
+}
 
 @end

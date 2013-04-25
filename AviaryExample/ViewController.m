@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "BannerViewController.h"
 
 @interface ViewController ()
 
@@ -29,6 +29,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 
 - (void) actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
@@ -80,7 +82,7 @@
 
 -(void)imagePickerControllerDidCancel:(UIImagePickerController *) photopicker {
     
-   [photopicker dismissModalViewControllerAnimated:YES];
+    [photopicker dismissModalViewControllerAnimated:YES];
     
     [photopicker release];
     
@@ -93,6 +95,9 @@
     [photopicker release];
     
 }
+
+
+#pragma mark - Aviary Delegate
 
 - (void)photoEditor:(AFPhotoEditorController *)editor finishedWithImage:(UIImage *)image
 {
@@ -109,12 +114,17 @@
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
+
+
+
+
 - (void)displayEditorForImage:(UIImage *)imageToEdit
 {
     AFPhotoEditorController *editorController = [[AFPhotoEditorController alloc] initWithImage:imageToEdit];
     [editorController setDelegate:self];
     [self presentViewController:editorController animated:YES completion:nil];
 }
+
 
 - (IBAction)displayAviaryEditor:(id)sender{
      
@@ -123,7 +133,12 @@
 
 
 
+
+
+//Per salvare la foto modificata nella Gallery
+
 -(void)image:(UIImage *)image finishedSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
+    
     if (error) {
         
         UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Salvataggio Fallito"
@@ -150,5 +165,15 @@
     UIImageWriteToSavedPhotosAlbum(imageView.image, self, @selector(image:finishedSavingWithError:contextInfo:), nil);
 }
 
+
+//aprire immagine in fullscreen
+- (IBAction)openBannerFullScreen{
+    
+    BannerViewController *bannerViewController = [[BannerViewController alloc]init];
+    bannerViewController.image = imageView.image;
+    [self presentModalViewController:bannerViewController animated:YES];
+    [bannerViewController release];
+    
+}
 
 @end

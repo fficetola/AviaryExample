@@ -29,6 +29,8 @@
 		0139042C1725EC600011E20C /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0139042B1725EC600011E20C /* libz.1.2.5.dylib */; };
 		0139042E1725EC680011E20C /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0139042D1725EC680011E20C /* libsqlite3.0.dylib */; };
 		01390457172740040011E20C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01390456172740040011E20C /* ViewController.m */; };
+		01A1BBEC172930EB005F72A6 /* BannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A1BBEA172930EB005F72A6 /* BannerViewController.m */; };
+		01A1BBED172930EB005F72A6 /* BannerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A1BBEB172930EB005F72A6 /* BannerViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +68,9 @@
 		0139042B1725EC600011E20C /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
 		0139042D1725EC680011E20C /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		01390456172740040011E20C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		01A1BBE9172930EA005F72A6 /* BannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerViewController.h; sourceTree = "<group>"; };
+		01A1BBEA172930EB005F72A6 /* BannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerViewController.m; sourceTree = "<group>"; };
+		01A1BBEB172930EB005F72A6 /* BannerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BannerViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,16 +100,6 @@
 		013903DF1725E7220011E20C = {
 			isa = PBXGroup;
 			children = (
-				0139042D1725EC680011E20C /* libsqlite3.0.dylib */,
-				0139042B1725EC600011E20C /* libz.1.2.5.dylib */,
-				013904291725EC4E0011E20C /* StoreKit.framework */,
-				013904271725EC3C0011E20C /* OpenGLES.framework */,
-				013904251725EC1B0011E20C /* CoreFoundation.framework */,
-				013904231725EC0E0011E20C /* CoreText.framework */,
-				013904211725EBF10011E20C /* SystemConfiguration.framework */,
-				0139041F1725EBE80011E20C /* QuartzCore.framework */,
-				0139041D1725EBDC0011E20C /* CoreData.framework */,
-				0139041B1725EBD40011E20C /* Accelerate.framework */,
 				0139040E1725E81D0011E20C /* AviarySDK */,
 				013903F11725E7220011E20C /* AviaryExample */,
 				013903EA1725E7220011E20C /* Frameworks */,
@@ -123,6 +118,16 @@
 		013903EA1725E7220011E20C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0139042D1725EC680011E20C /* libsqlite3.0.dylib */,
+				0139042B1725EC600011E20C /* libz.1.2.5.dylib */,
+				013904291725EC4E0011E20C /* StoreKit.framework */,
+				013904271725EC3C0011E20C /* OpenGLES.framework */,
+				013904251725EC1B0011E20C /* CoreFoundation.framework */,
+				013904231725EC0E0011E20C /* CoreText.framework */,
+				013904211725EBF10011E20C /* SystemConfiguration.framework */,
+				0139041F1725EBE80011E20C /* QuartzCore.framework */,
+				0139041D1725EBDC0011E20C /* CoreData.framework */,
+				0139041B1725EBD40011E20C /* Accelerate.framework */,
 				013903EB1725E7220011E20C /* UIKit.framework */,
 				013903ED1725E7220011E20C /* Foundation.framework */,
 				013903EF1725E7220011E20C /* CoreGraphics.framework */,
@@ -133,6 +138,9 @@
 		013903F11725E7220011E20C /* AviaryExample */ = {
 			isa = PBXGroup;
 			children = (
+				01A1BBE9172930EA005F72A6 /* BannerViewController.h */,
+				01A1BBEA172930EB005F72A6 /* BannerViewController.m */,
+				01A1BBEB172930EB005F72A6 /* BannerViewController.xib */,
 				01390456172740040011E20C /* ViewController.m */,
 				013903FA1725E7220011E20C /* AppDelegate.h */,
 				013903FB1725E7220011E20C /* AppDelegate.m */,
@@ -245,6 +253,7 @@
 				013904021725E7220011E20C /* Default-568h@2x.png in Resources */,
 				013904081725E7220011E20C /* ViewController.xib in Resources */,
 				0139041A1725E81D0011E20C /* AviarySDKResources.bundle in Resources */,
+				01A1BBED172930EB005F72A6 /* BannerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +267,7 @@
 				013903F81725E7220011E20C /* main.m in Sources */,
 				013903FC1725E7220011E20C /* AppDelegate.m in Sources */,
 				01390457172740040011E20C /* ViewController.m in Sources */,
+				01A1BBEC172930EB005F72A6 /* BannerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
